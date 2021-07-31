@@ -29,8 +29,12 @@ const Producto = ({ producto, carrito, agregarProducto, productos }) => {
 
     //! Eliminar producto del carrito
     const eliminarProducto = id => {
-        const producto = carrito.filter(producto => producto.id !== id);
-        agregarProducto(producto)
+
+        const deletedProducto = carrito.find(producto => producto.id === id);
+        deletedProducto.cantidad = 1;
+        
+        const productos = carrito.filter(producto => producto.id !== id);
+        agregarProducto(productos)
     }
 
     return ( 

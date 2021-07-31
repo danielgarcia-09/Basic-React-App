@@ -52,6 +52,8 @@ function App() {
             agregarProducto={ agregarProducto }
           />
 
+          
+
         </div>
           <Footer 
             fecha={ fecha }
