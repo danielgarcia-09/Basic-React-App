@@ -9,10 +9,10 @@ function App() {
 
   //* Crear listado de productos
   const [ productos, guardarProductos ] = useState([
-    { id: 1, nombre: 'Camisa ReactJS', precio: 50 },
-    { id: 2, nombre: 'Camisa VueJS', precio: 40 },
-    { id: 3, nombre: 'Camisa Node.js', precio: 30 },
-    { id: 4, nombre: 'Camisa Angular', precio: 20 },
+    { id: 1, nombre: 'Camisa ReactJS', precio: 50, cantidad: 1 },
+    { id: 2, nombre: 'Camisa VueJS', precio: 40, cantidad: 1 },
+    { id: 3, nombre: 'Camisa Node.js', precio: 30, cantidad: 1 },
+    { id: 4, nombre: 'Camisa Angular', precio: 20, cantidad: 1 },
   ]);
 
   //? State para un carrito de compras
@@ -32,8 +32,8 @@ function App() {
         <div className="container is-widescreen is-flex is-flex-direction-row is-flex-wrap-wrap is-justify-content-center mt-6">
           
           <div style={{width: 300 + 'px'}}>
-            <h1 className="title is-4">Lista de Productos</h1>
-            <div className=" is-flex is-flex-direction-row is-flex-wrap-wrap">
+            <h1 className="has-text-centered title is-4">Lista de Productos</h1>
+            <div>
               {productos.map(producto => (
                 <Producto
                   key={ producto.id }  
